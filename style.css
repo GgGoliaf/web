@@ -1,0 +1,248 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    line-height: 1.6;
+    color: #4a3b32;
+    background-color: #fdfaf7;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.site-header {
+    padding: 24px 0;
+    background-color: #f5ebe0;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    color: #6f4e37;
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+}
+
+.nav a {
+    color: #7f5539;
+    text-decoration: none;
+    font-size: 26px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav a:hover {
+    color: #b07d62;
+    transform: translateY(-2px);
+}
+
+.hero {
+    padding: 100px 0 110px;
+    background-color: #eddcd2;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.hero-content {
+    animation: fade-up 0.8s ease-out;
+}
+
+.hero-label {
+    margin: 0 0 12px;
+    color: #7f5539;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 0 0 24px;
+    max-width: 720px;
+    font-size: 64px;
+    line-height: 1;
+    color: #4a3b32;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin-bottom: 32px;
+    color: #7f5539;
+    font-size: 20px;
+}
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coffee-orbit {
+    position: relative;
+    width: 360px;
+    height: 360px;
+}
+
+.coffee-cup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #9c6644, #7f5539, #4a3b32);
+    border: 8px solid #fdfaf7;
+    box-shadow: 0 10px 30px rgba(74, 59, 50, 0.25);
+}
+
+.coffee-bean-1, .coffee-bean-2, .coffee-bean-3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 26px;
+    height: 16px;
+    background: #7f5539;
+    border-radius: 50%;
+}
+
+.coffee-bean-1 {
+    animation: spin-1 20s linear infinite;
+}
+
+.coffee-bean-2 {
+    animation: spin-2 20s linear infinite;
+}
+
+.coffee-bean-3 {
+    animation: spin-3 20s linear infinite;
+}
+
+.menu-section {
+    padding: 100px 0;
+}
+
+.menu-section h2 {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 60px;
+    color: #4a3b32;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.menu-card {
+    background-color: #ffffff;
+    border: 1px solid #eddcd2;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(111, 78, 55, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(111, 78, 55, 0.12);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.menu-card h3 {
+    margin: 20px 0 8px;
+    font-size: 24px;
+    color: #4a3b32;
+}
+
+.menu-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #6f4e37;
+}
+
+.footer {
+    background-color: #4a3b32;
+    color: #eddcd2;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 18px;
+}
+
+.footer p {
+    margin: 6px 0;
+}
+
+@keyframes spin-1 {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg) translateX(130px);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg) translateX(130px);
+    }
+}
+
+@keyframes spin-2 {
+    from {
+        transform: translate(-50%, -50%) rotate(120deg) translateX(130px);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(480deg) translateX(130px);
+    }
+}
+
+@keyframes spin-3 {
+    from {
+        transform: translate(-50%, -50%) rotate(240deg) translateX(130px);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(600deg) translateX(130px);
+    }
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
